@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+Amount:<br>
+<select><br>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="ALL">ALL</option>
+</select>
+<br>
+<td>Total: <input id="quantity" name="quantity" type="text" value="$0.00" size="3" /></td>
+</form>
+<script>
+var selectElement = document.getElementById("mySelect");
+    selectElement.addEventListener('change',myFunction);
+    function myFunction() {
+        var value = document.getElementById("mySelect").value;
+        if(value=="ALL")
+        value=7;
+        var fixedAmount=10;
+        document.getElementById("quantity").value = '$'+fixedAmount*value;
+    }</script>
+    </html>
+</body>
